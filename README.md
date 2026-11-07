@@ -15,7 +15,6 @@ Repositório onde documento meus estudos teóricos sobre protocolos e comunicaç
 ```
 estudos-redes/
 ├── assets/img/
-│   ├── tcp-ip/     # imagens dos estudos de TCP/IP
 │   └── http/       # imagens dos estudos de HTTP
 ├── docs/           # documentação teórica
 └── README.md

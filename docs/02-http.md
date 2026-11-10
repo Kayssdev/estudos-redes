@@ -36,7 +36,7 @@ Basicamente o "S" em HTTPS indica que a comunicação é segura e protegida.
 - 500 Internal Server Error: A aplicação quebrou no servidor(bug). A culpa é do servidor
 - 502 Bad Gateway: O Proxy ou Gateway não conseguiu uma resposta válida do upstream.
 
-2xx é sucesso, 3xx é redirecionamento, 4xx é erro do cliente e 5xx é erro do servidor!
+2xx é sucesso, 3xx é redirecionamento, 4xx é erro do cliente e 5xx é erro do servidor.
 
 ## Versões do HTTP
 

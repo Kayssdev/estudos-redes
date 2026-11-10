@@ -13,30 +13,30 @@ Basicamente o "S" em HTTPS indica que a comunicação é segura e protegida.
 
 ## Métodos HTTP
 
-- GET: Solicita dados de um recurso específico. É usado para recuperar informações do servidor.
-  
-- POST: Envia dados para serem processados a um recurso especificado. Usado para enviar informações para serem processadas para uma determinada URL.
-
-- PUT: Atualiza um recurso existente ou cria um novo recurso se não existir. O cliente envia os dados do recurso com o local desejado especificado na URL.
-
-- DELETE: Remove um recurso específico no servidor.
-
-- OPTIONS: Retorna os métodos HTTP que o servidor suporta para um determinado URL. É útil para verificar as opções disponíveis para uma URL, como permissões de CORS (Cross-Origin Resource Sharing).
-
-- PATCH: Aplica modificações parciais a um recurso. É usado para atualizar parcialmente um recurso existente.
-
-- HEAD: Semelhante ao GET, mas solicita apenas os cabeçalhos do recurso, sem o corpo da resposta. É útil para obter informações sobre um recurso sem transferir todo o conteúdo.
+| Verbo    | Uso                                                                                                                                      | Idempotente               | Body            |
+|----------|------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|-----------------|
+| GET      | Solicita dados de um recurso específico. É usado para recuperar informações do servidor.                                                 | Sim                       | Não             |
+| POST     | Envia dados para serem processados a um recurso especificado. Usado para enviar informações para serem processadas para uma determinada URL. | Não (repetir cria duplicatas) | Sim         |
+| PUT      | Atualiza um recurso existente ou cria um novo recurso se não existir. O cliente envia os dados do recurso com o local desejado especificado na URL. | Sim                | Sim             |
+| PATCH    | Aplica modificações parciais a um recurso. É usado para atualizar parcialmente um recurso existente.                                     | Não garantido             | Sim             |
+| DELETE   | Remove um recurso específico no servidor.                                                                                                | Sim                       | Normalmente não |
+| OPTIONS  | Retorna os métodos HTTP que o servidor suporta para um determinado URL. É útil para verificar as opções disponíveis para uma URL, como permissões de CORS (Cross-Origin Resource Sharing). | Sim | Não |
+| HEAD     | Semelhante ao GET, mas solicita apenas os cabeçalhos do recurso, sem o corpo da resposta. É útil para obter informações sobre um recurso sem transferir todo o conteúdo. | Sim | Não |
 
 ## Códigos de status
 
 - 200 OK: Solicitação bem-sucedida
 - 201 Created: Recurso criado com sucesso.
 - 204 No Content: Solicitação bem-sucedida, sem conteúdo a ser retornado
-- 400 Bad Request: Requisição inválida do cliente.
+- 301 Moved Permanently: A URL mudou definitivamente
+- 400 Bad Request: Requisição malformada: JSON inválido, campo obrigatório ausente. Requisição inválida do cliente.
 - 401 Unauthorized: Falha na autenticação ou ausência de autorização.
-- 403 Forbidden: O servidor entendeu a requisição, mas recusa o acesso.
-- 404 Not Found: Recurso não encontrado.
-- 500 Internal Server Error: Erro interno do servidor.
+- 403 Forbidden: O servidor entendeu a requisição, mas recusa o acesso do usuário0.
+- 404 Not Found: Recurso ou caminho não existe.
+- 500 Internal Server Error: A aplicação quebrou no servidor(bug). A culpa é do servidor
+- 502 Bad Gateway: O Proxy ou Gateway não conseguiu uma resposta válida do upstream.
+
+2xx é sucesso, 3xx é redirecionamento, 4xx é erro do cliente e 5xx é erro do servidor!
 
 ## Versões do HTTP
 

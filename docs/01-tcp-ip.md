@@ -27,6 +27,7 @@ O que faz: transmite bits pelo meio físico; organiza dados em quadros (frames);
 IPv4: 32 bits, 4 octetos (192.168.33.10)
 
 Privado (não roteado na internet, usa NAT): 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16.
+
 Público: único no mundo, atribuído pelo provedor.
 
 ## TCP vs UDP

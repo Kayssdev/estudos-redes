@@ -61,3 +61,4 @@ O servidor retorna o status `301 Moved Permanently` com os cabeçalhos de respos
 Por fim, o corpo HTML é entregue — neste caso, uma página simples de redirecionamento:
 
 ![Corpo HTML da resposta 301](../assets/img/http/03-resposta-body.png)
+

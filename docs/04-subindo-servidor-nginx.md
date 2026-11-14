@@ -166,7 +166,7 @@ Copie a URL de `Forwarding`.
 2. Abra a URL do ngrok no navegador.
 3. A página do Nginx deve carregar diretamente.
 
-![celular acessando a página via URL ngrok-free.dev pelo 5G](../assets/img/nginx/01-acesso-celular-5g.png)
+![celular acessando a página via URL ngrok-free.dev pelo 5G](/assets/img/nginx/01-acesso-celular-5g.png)
 
 ## 7. Evidências
 

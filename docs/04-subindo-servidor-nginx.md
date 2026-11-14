@@ -186,3 +186,27 @@ Pressione `Ctrl+C` no terminal do ngrok. O endereço público deixa de funcionar
 
 - Instalação do ngrok no Linux: <https://ngrok.com/downloads/linux>
 - Documentação do Nginx: <https://nginx.org/en/docs/>
+
+## Evidências do lab
+
+### Instalação do Nginx e do ngrok
+
+![apt update e apt install nginx rodando na VM](../assets/img/nginx/03-instalacao-nginx.png)
+
+![snap install ngrok confirmando que o pacote já está instalado](../assets/img/nginx/04-instalacao-ngrok.png)
+
+### Configuração — nginx -T e conteúdo do HTML
+
+![saída do nginx -T com root e index, e cat do index.nginx-debian.html](../assets/img/nginx/05-config-nginx-html.png)
+
+### Túnel ativo no ngrok
+
+![painel do ngrok mostrando Session Status online e requisições recebidas](../assets/img/nginx/02-painel-ngrok.png)
+
+### Acesso pelo celular no 5G
+
+![celular acessando a página via URL ngrok-free.dev pelo 5G](../assets/img/nginx/01-acesso-celular-5g.png)
+
+### Log de acesso do Nginx
+
+![tail -f do access.log registrando GET e HEAD do curl e do Android Firefox](../assets/img/nginx/06-access-log.png)

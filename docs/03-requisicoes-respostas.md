@@ -10,7 +10,7 @@ A estrutura é bem simples, é organizada dessa forma:
 |---------------|----------------------------------|------------------------------------------------|
 | Linha inicial | `GET / HTTP/1.1`                 | Método, caminho e versão do protocolo          |
 | Cabeçalhos    | `Host: google.com`               | Metadados da requisição                        |
-| Linha em branco | `>`                            | Separa os cabeçalhos do corpo                  |
+| Linha em branco | _(linha vazia)_                  | Separa os cabeçalhos do corpo                  |
 | Corpo         | _(vazio no GET)_                 | GET e HEAD normalmente não enviam body         |
 
 ## Estrutura de uma resposta (Response)
@@ -21,7 +21,7 @@ E a estrutura de resposta por fim é desta forma:
 |-----------------|--------------------------------------|--------------------------------------------|
 | Linha de status | `HTTP/1.1 301 Moved Permanently`     | Versão, código e texto do status           |
 | Cabeçalhos      | `Location: http://www.google.com/`   | Metadados da resposta                      |
-| Linha em branco | `<`                                  | Separa os cabeçalhos do corpo              |
+| Linha em branco | _(linha vazia)_                      | Separa os cabeçalhos do corpo              |
 | Corpo           | `<HTML>...</HTML>`                   | Conteúdo retornado (HTML, JSON, etc.)      |
 
 ## Headers mais comuns
